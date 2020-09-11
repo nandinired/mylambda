@@ -5,7 +5,6 @@ phases:
         nodejs: 10
   build:
     commands:
-      - node app.js
       - npm install time
       - export BUCKET=test-pipeline-output1-bucket
       - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
